@@ -1,0 +1,172 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Is anyone there?", "Hey", "Hola", "How are you"],
+      "responses": ["Hello!", "Hi there!", "How can I help you today?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": ["See you later!", "Goodbye!", "Have a great day!"]
+    },
+    {
+      "tag": "property_registration",
+      "patterns": ["How do I register my property?", "What is the process of registering a property?", "Can I add my property to the system?"],
+      "responses": ["To register a property, sign up as a property owner and follow the steps provided in your dashboard."]
+    },
+    {
+      "tag": "tenant_management",
+      "patterns": ["How do I manage my tenants?", "How can I keep track of my tenants' information?", "Can I manage tenants through the CRM?"],
+      "responses": ["Our CRM allows you to manage your tenants' information, keep track of their rent due, and log maintenance requests."]
+    },
+    {
+      "tag": "bills",
+      "patterns": ["How do I save electricity bills?", "How do I save water bills?", "Can I save maintenance bills on the platform?"],
+      "responses": ["Our CRM allows you to save and manage electricity, water, and maintenance bills for each of your properties."]
+    },
+    {
+      "tag": "tenant_login",
+      "patterns": ["How can I log into my tenant dashboard?", "What are the steps to log in as a tenant?", "I am a tenant, how can I access the CRM?"],
+      "responses": ["To log into your tenant dashboard, use your email address and password provided during registration. If you haven't registered yet, contact your landlord to do so."]
+    },
+    {
+      "tag": "rent_status",
+      "patterns": ["How can I check if my rent is due?", "Where can I see if I've paid my rent?", "Can I view my rent payment history in the dashboard?"],
+      "responses": ["You can check your rent status and payment history in your tenant dashboard. It will show whether your rent is due or has already been paid, as well as your past payment records."]
+    },
+    {
+      "tag": "maintenance_requests",
+      "patterns": ["How do I submit a maintenance request?", "Where can I log a maintenance request?", "Can I request maintenance through the CRM?"],
+      "responses": ["To submit a maintenance request, log into your tenant dashboard and navigate to the 'Maintenance Requests' section. There, you can create a new request and provide the necessary details."]
+    },
+    {
+      "tag": "bill_record_keeping",
+      "patterns": ["How can I keep track of my bills?", "Where can I store my bills in the CRM?", "Is there a way to organize my bills on the platform?"],
+      "responses": ["As a property owner, you can keep track of your bills by uploading them to the 'Bills' section of your dashboard. You can organize them by property, date, and bill type."]
+    },
+    {
+      "tag": "ocr_functionality",
+      "patterns": ["Can I use OCR to digitalize my bills?", "Is there an OCR feature for bills?", "How can I convert my physical bills to digital format?"],
+      "responses": ["Yes, our platform offers an OCR functionality that allows you to scan and digitalize your bills. Upload a clear image or PDF of your bill, and our system will extract the relevant information and save it to your dashboard."]
+    },
+    {
+      "tag": "multiple_apartments",
+      "patterns": ["Can I manage multiple apartments under one property?", "How do I add several apartments to a single property?", "Is it possible to have multiple apartments for one property in the CRM?"],
+      "responses": ["Yes, you can manage multiple apartments under one property in the CRM. Simply add each apartment to the corresponding property and provide the necessary details."]
+    },
+    {
+      "tag": "add_location",
+      "patterns": ["How can I add the location of my property?", "Where do I input the address of my property?", "Can I include the location of each apartment in the CRM?"],
+      "responses": ["To add the location of your property, navigate to the property details page in your dashboard and enter the address or coordinates of your property."]
+    },
+    {
+      "tag": "apartment_description",
+      "patterns": ["How do I write a description for my apartment?", "Where can I provide details about my apartments?", "Can I add descriptions for each apartment in the CRM?"],
+      "responses": ["To write a description for your apartment, go to the apartment details page in your dashboard and enter the relevant information in the 'Description' section."]
+    },
+    {
+      "tag": "view_listings",
+      "patterns": ["How can I view my apartment listings?", "Where can I see the different properties I have?", "Can I view all my properties and apartments in one place?"],
+      "responses": ["To view your apartment listings, navigate to the 'Properties' or 'Apartments' section in your dashboard. There, you can see all your properties and apartments."]
+    },
+    {
+      "tag": "bill_maintenance_dashboards",
+      "patterns": ["How do I access the bill dashboard?", "Where can I find the maintenance dashboard?", "Is there a dedicated section for bills and maintenance in the CRM?"],
+      "responses": ["To access the bill and maintenance dashboards, navigate to the respective sections in your property owner dashboard. You can view and manage all bills and maintenance requests there."]
+    },
+    {
+      "tag": "communication",
+      "patterns": ["How can I communicate with my agents and tenants?", "Is there a way to send emails to agents and tenants through the CRM?", "Can I message my tenants and agents on the platform?"],
+      "responses": ["You can communicate with your agents and tenants through the CRM's built-in messaging system. Navigate to the 'Messages' or 'Communication' section in your dashboard to send and receive emails."]
+    },
+    {
+      "tag": "ocr_overview",
+      "patterns": ["What is the OCR AI receipt scanning facility?", "How does the OCR feature work?", "Can you explain the OCR AI receipt scanning functionality?"],
+      "responses": ["The OCR AI receipt scanning facility is a feature that allows you to easily digitize your bills by scanning the text and data from a picture of your bill. The CRM uses Optical Character Recognition (OCR) technology to extract relevant information from the bill image and automatically updates your records."]
+    },
+    {
+      "tag": "upload_picture",
+      "patterns": ["How do I upload a picture of my bill?", "Where can I add an image of my receipt for OCR scanning?", "Can I upload a photo of my bill for OCR processing?"],
+      "responses": ["To upload a picture of your bill for OCR scanning, navigate to the 'Bills' or 'OCR Scanning' section in your dashboard. Click on the 'Upload' button, and select the image file of your bill from your device. The OCR feature will then process the image and extract the relevant information."]
+    },
+    {
+      "tag": "ocr_process",
+      "patterns": ["What happens after I upload a picture of my bill?", "How does the CRM process the bill image?", "What can I expect after uploading a photo of my receipt for OCR scanning?"],
+      "responses": ["After you upload a picture of your bill, the OCR AI receipt scanning facility processes the image, extracts the text and data, and automatically updates your records. You can then review and confirm the extracted information, ensuring that your bill details are accurate and up to date."]
+    },
+    {
+      "tag": "ocr_tips",
+      "patterns": ["Do you have any tips for using the OCR feature?", "How can I improve the accuracy of OCR scanning?", "What should I keep in mind while using the OCR AI receipt scanning facility?"],
+      "responses": ["To improve the accuracy of OCR scanning, make sure the bill image is clear, well-lit, and in focus. Avoid shadows or glare on the text, and try to capture the entire bill in the frame. High-resolution images with good contrast between the text and the background will yield better results."]
+    },
+    {
+      "tag": "predictive_analytics_overview",
+      "patterns": ["What is predictive analytics?", "How does predictive analytics work?", "Can you explain the predictive analytics feature in the CRM?"],
+      "responses": ["Predictive analytics is a set of AI algorithms that analyze data from your property management CRM to predict future trends in your business. It can help you forecast occupancy rates, rental prices, and maintenance costs, allowing you to make informed decisions and optimize your property management strategies."]
+    },
+    {
+      "tag": "forecast_occupancy",
+      "patterns": ["How can I predict occupancy rates?", "Can the CRM forecast occupancy rates?", "What can predictive analytics tell me about future occupancy rates?"],
+      "responses": ["Using predictive analytics, the CRM can forecast occupancy rates based on historical data and current market trends. This allows you to anticipate vacancies, adjust rental prices, and plan marketing efforts to attract tenants and maximize revenue."]
+    },
+    {
+      "tag": "predict_rental_prices",
+      "patterns": ["Can I predict rental prices with the CRM?", "How can predictive analytics help me set rental prices?", "What can I learn about future rental prices using the CRM?"],
+      "responses": ["Predictive analytics in the CRM can help you estimate future rental prices by analyzing market trends, historical rental data, and property-specific factors. This information allows you to set competitive rental prices, attract tenants, and optimize your revenue."]
+    },
+    {
+      "tag": "forecast_maintenance_costs",
+      "patterns": ["Can the CRM predict maintenance costs?", "How can I use predictive analytics to estimate maintenance expenses?", "What can the CRM tell me about future maintenance costs?"],
+      "responses": ["Predictive analytics can help you forecast maintenance costs by analyzing historical maintenance data, property age, and other factors. This allows you to plan for future expenses, allocate resources efficiently, and minimize unexpected costs."]
+    },
+    {
+      "tag": "predictive_analytics_benefits",
+      "patterns": ["What are the benefits of using predictive analytics?", "How can predictive analytics improve my property management business?", "Why should I use predictive analytics in the CRM?"],
+      "responses": ["Using predictive analytics in your property management CRM can help you make informed decisions, optimize your strategies, and increase revenue. By forecasting occupancy rates, rental prices, and maintenance costs, you can plan ahead, allocate resources efficiently, and minimize risks associated with market fluctuations."]
+    },
+    {
+      "tag": "crm_overview",
+      "patterns": [
+        "What does the CRM do?", "What services does the CRM offer?", "Can you tell me about the CRM's features?"
+      ],
+      "responses": [
+        "The CRM offers a range of services for property owners, landlords, and tenants. It helps manage properties, track rent payments, handle maintenance requests, and communicate with all parties. Additionally, the platform offers features like OCR for digitalizing bills and predictive analytics for making informed decisions."
+      ]
+    },
+    {
+      "tag": "benefits_landlords",
+      "patterns": [
+        "How does the CRM benefit landlords?", "What advantages does the CRM offer to property owners?", "Why should a landlord use this CRM?"
+      ],
+      "responses": [
+        "The CRM benefits landlords and property owners by streamlining property management tasks, such as tracking rent payments, managing tenant information, and handling maintenance requests. It also offers valuable features like OCR for digitalizing bills and predictive analytics for forecasting occupancy rates, rental prices, and maintenance costs. This helps landlords make informed decisions and optimize their property management strategies."
+      ]
+    },
+    {
+      "tag": "benefits_tenants",
+      "patterns": [
+        "How does the CRM benefit tenants?", "What advantages does the CRM offer to tenants?", "Why should a tenant use this CRM?"
+      ],
+      "responses": [
+        "The CRM benefits tenants by providing a user-friendly platform to manage their rental experience. Tenants can easily track their rent payments, submit maintenance requests, and communicate with their landlords or property managers. This simplifies the rental process and helps tenants stay organized and informed."
+      ]
+    },
+    {
+      "tag": "crm_web_app",
+      "patterns": [
+        "What does the CRM web app do?", "What does the CRM web application do?",
+        "What services does the CRM web app provide?", "What services does the CRM web application provide?",
+        "Can you tell me about the CRM web app's features and advantages?", "Can you tell me about the CRM web application's features and advantages?"
+      ],
+      "responses": [
+        "The CRM web app or application is designed to simplify property management for property owners, landlords, and tenants. It provides a range of services, including managing properties, tracking rent payments, handling maintenance requests, and facilitating communication between all parties. The web app also offers advanced features like OCR for digitalizing bills and predictive analytics to help make informed decisions. The advantages of using the CRM web app or application include streamlined property management, optimized decision-making, better organization, and improved communication."
+      ]
+    },
+    {
+      "tag": "unrecognized",
+      "patterns": [],
+      "responses": ["I'm sorry, I didn't understand your question. Please try again or ask something else."]
+    }
+  ]
+}

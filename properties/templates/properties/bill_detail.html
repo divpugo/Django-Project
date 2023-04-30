@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="flex hover:text-blue-500">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+        <path d="M15 19L7 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <a href="{{ request.META.HTTP_REFERER }}">Go back</a>
+</div>
+<h2 class="text-2xl font-semibold mb-4">{{ bill.utility.name }} - {{ bill.date }}</h2>
+<div class="border border-gray-200 p-4 rounded shadow flex">
+    <div class="mr-4">
+        <p><span class="font-semibold">Date:</span> {{ bill.date }}</p>
+        <p><span class="font-semibold">Amount:</span> {{ bill.amount }}</p>
+        <p><span class="font-semibold">Unit:</span> {{ bill.unit }}</p>
+    </div>
+    {% if bill.image %}
+        <div class="ml-auto">
+            <img class="rounded shadow" src="{{ bill.image.url }}" alt="{{ bill.utility.name }} - {{ bill.date }}" style="max-width: 300px; max-height: 300px;">
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

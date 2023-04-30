@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/1F1WgPSJFldb9tILRB2P2d07gyrvv02Yg/092p" crossorigin="anonymous">
+
+{% block content %}
+<div class="max-w-7xl mx-auto full-height">
+    <h1 class="text-3xl text-gray-800 mb-4">Welcome, {{ request.user.first_name }} {{ request.user.last_name }}</h1>
+    <h2 class="text-2xl text-gray-800 mb-4">Category: {{ category }}</h2>
+    <h3 class="text-2xl mb-6">Your agent is {{ request.user.lead.agent }}</h3>
+    {% if apartment %}
+<div class="flex justify-end mb-4">
+<a href="{% url 'leads:maintenance-request-create' %}" class="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 mr-2">Create Maintenance Request</a>
+<a href="{% url 'leads:maintenance_request_list' %}" class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 mr-2">View Requests sent</a>
+</div>
+<div class="bg-white shadow-lg rounded-lg overflow-hidden mt-8">
+    <div class="flex">
+      <div class="w-1/2 p-8">
+        <p class="text-gray-600 text-xl mb-4 font-semibold">Property Details</p>
+        <div class="grid grid-cols-2 gap-6 mt-20">
+          <p class="mb-2"><span class="font-semibold"><i class="fas fa-user-tie mr-2"></i>Name:</span> {{ apartment.name }}</p>
+          <p class="mb-2"><span class="font-semibold"><i class="fas fa-building mr-2"></i>Property:</span> {{ apartment.property.name }}</p>
+          <p class="mb-2"><span class="font-semibold"><i class="fas fa-info-circle mr-2"></i>Description:</span> {{ apartment.description }}</p>
+          <p class="mb-2"><span class="font-semibold"><i class="fas fa-dollar-sign mr-2"></i>Rent:</span>  {{ apartment.rent }}</p>
+        </div>
+      </div>
+      <div class="w-1/2 relative">
+        <div class="fade">
+          <img src="{{ apartment.image.url }}" alt="{{ apartment.name }} image" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <h2 class="text-2xl text-gray-800 mb-4">No apartment assigned yet</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}

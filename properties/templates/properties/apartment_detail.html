@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/1F1WgPSJFldb9tILRB2P2d07gyrvv02Yg/092p" crossorigin="anonymous">
+<style>
+  .fade-left {
+    position: relative;
+  }
+  .fade-left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 100%);
+  }
+</style>
+<div class="flex hover:text-blue-500">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+    <path d="M15 19L7 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <a href="{{ request.META.HTTP_REFERER }}">Go back</a>
+</div>
+<div class="bg-gray-100 min-h-screen">
+  <div class="container mx-auto py-12">
+    <div class="flex justify-between items-start mb-8">
+      <h2 class="text-4xl font-bold text-gray-600">{{ object.name }}</h2>
+      <div>
+        <a href="{% url 'properties:utility-list' property_id=apartment.property.pk %}" class="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 mr-2">View Utilities</a>
+        <a href="{% url 'properties:apartment-update' pk=apartment.pk %}" class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600">Edit Apartment</a>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="flex">
+        <div class="w-1/2 p-8">
+          <p class="text-gray-600 text-xl mb-4 font-semibold">Property Details</p>
+          <div class="grid grid-cols-2 gap-6 mt-20">
+            <p class="mb-2"><span class="font-semibold"><i class="fas fa-building mr-2"></i>Property:</span> {{ object.property }}</p>
+            <p class="mb-2"><span class="font-semibold"><i class="fas fa-user-check mr-2"></i>Is Occupied:</span> {{ object.is_occupied }}</p>
+            <p class="mb-2"><span class="font-semibold"><i class="fas fa-user-tie mr-2"></i>Lead:</span> {{ object.lead }}</p>
+            <p class="mb-2"><span class="font-semibold"><i class="fas fa-users mr-2"></i>Agent:</span> {{ object.agent }}</p>
+            <p class="mb-2"><span class="font-semibold"><i class="fas fa-info-circle mr-2"></i>Description:</span> {{ object.description }}</p>
+            <p class="mb-2"><span class="font-semibold"><i class="fas fa-dollar-sign mr-2"></i>Rent:</span> {{ object.rent }}</p>
+          </div>
+        </div>
+        <div class="w-1/2 relative">
+          <div class="fade-left">
+            <img src="{{ object.image.url }}" alt="{{ object.name }} image" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

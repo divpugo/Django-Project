@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management</title>
+    <link href="{% static 'CSS/styles.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <div class="min-h-screen flex flex-col">
+        {% include 'navbar.html' %}
+        <div class="flex-1 container mx-auto px-4 py-8 sm:py-12">
+          {% block content %}
+          {% endblock content %}
+        </div>
+    </div>
+    {% include 'chatbot/chatbot_widget.html' %}
+</body>
+
+<footer class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto px-4">
+      <p class="text-center text-sm sm:text-base">&copy; {% now "Y" %} My Company. All rights reserved.</p>
+    </div>
+  </footer>
+</html>
+

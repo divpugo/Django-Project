@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load tailwind_filters %}
+
+{% block content %}
+    <div class="flex hover:text-blue-500">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+        <path d="M15 19L7 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <a href="{% url 'properties:property-list' %}">Go back to Properties</a>
+    </div>
+    <div class="max-w-lg mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Create Property</h2>
+        <form method="POST" enctype="multipart/form-data">  
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600">Add Property</button>
+        </form>
+    </div>
+
+{% endblock %}

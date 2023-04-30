@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <!-- Hero Section -->
+  <section class="bg-blue-500 text-white py-16" style="background-color: #415A77;">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Effortlessly Manage Your Rental Properties with Rentify</h1>
+        <p class="text-white text-opacity-75 mb-8">Rentify simplifies property management with a centralized platform, AI-assisted record-keeping, and an assistive chatbot for support. Our tenant dashboard enables rent tracking and maintenance requests, enhancing rental experiences for landlords and tenants alike.</p>
+        <a href="{% url 'signup' %}" class="bg-white text-black py-2 px-4 rounded hover:bg-gray-300 hover:text-white inline-block">Get Started</a>
+      </div>
+      <div class="md:w-1/2">
+        <img src="{% static 'images/rental.jpg' %}" alt="Placeholder Image" class="rounded shadow-lg ml-20">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-2xl font-bold mb-4">Centralized Property & Tenant Information</h3>
+          <p class="mb-4">Rentify offers a comprehensive platform for landlords to consolidate all their property and tenant information in one user-friendly interface. This centralization facilitates seamless data management and access, streamlining property-related tasks and contributing to a more efficient property management experience.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-2xl font-bold mb-4">AI OCR for Record-Keeping & AI Chatbot Support</h3>
+          <p class="mb-4">Rentify's AI OCR feature makes it easy for landlords to keep track of bills and expenses, ensuring a streamlined financial management process. Our AI-powered chatbot is also available to provide assistance and answer any queries related to the operation of the system, making it easier for landlords and tenants to manage their properties effectively.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-2xl font-bold mb-4">Tenant Dashboard for Rent Status and Maintenance Requests</h3>
+          <p class="mb-4">Rentify's property management platform offers a comprehensive tenant dashboard, allowing tenants to monitor their rent status and submit maintenance requests for their apartments. This feature empowers tenants to stay informed and ensures that their concerns are addressed promptly, contributing to a better overall rental experience.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock content %}
